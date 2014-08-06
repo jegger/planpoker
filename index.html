@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="pokerApp">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Planpoker App</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <script src="/app.js"></script>
+
+    <script src="/components/cardflip/cardflip.js"></script>
+    <link rel="stylesheet" href="/components/cardflip/cardflip.css" />
+  </head>
+
+  <body ng-controller="mainController">
+    <div class="container">
+        <div class="jumbotron clearfix">
+            <button ng-click="showAll()" ng-show="canGoBack" type="button" class="btn btn-lg btn-default">Back</button> <br>
+                <div class="flip" ng-repeat="card in shownCards"> 
+                    <div class="card" ng-class="{'flipped':card.flipped}" ng-click="selectCard(card)"> 
+                        <div class="face front"> 
+                            {{card.text}}
+                        </div> 
+                        <div class="face back"> 
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+
+</html>
