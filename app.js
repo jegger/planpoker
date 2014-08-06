@@ -29,7 +29,7 @@ angular.module('pokerApp', [
                 $scope.cards[card].flipped = false;
                 $scope.canGoBack = false;
             }
-            $scope.shownCards = $scope.cards
+            $scope.shownCards = angular.copy($scope.cards);
             console.log($scope.shownCards)
         }
         $scope.showAll = showAll
