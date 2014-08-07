@@ -19,15 +19,14 @@
             <div class="row">
                 <button ng-click="showAll()" ng-show="canGoBack" type="button" class="btn btn-lg btn-default">Back</button>
             </div>
-                <div class="flip pull-left" ng-repeat="card in shownCards"> 
-                    <div class="card" ng-class="{'flipped':card.flipped}" ng-click="selectCard(card)"> 
-                        <div class="face front"> 
-                            {{card.text}}
-                        </div> 
-                        <div class="face back"> 
-                        </div> 
+            <div class="flip pull-left" ng-repeat="card in shownCards"> 
+                <div class="card" ng-class="{'flipped':card.flipped}" ng-click="selectCard(card)"> 
+                    <div class="face front"> 
+                        {{card.text}}
                     </div> 
-                </div>
+                    <div class="face back"> 
+                    </div> 
+                </div> 
             </div>
         </div>
     </div>
