@@ -13,7 +13,7 @@ angular.module('pokerApp', [
                         {text : 20, flipped: false},
                         {text : 40, flipped: false},
                         {text : 100, flipped: false},
-                        {text : "coffe", flipped: false}
+                        {text : "café", flipped: false}
                         ]
         $scope.canGoBack = false;
         showAll();
@@ -29,7 +29,7 @@ angular.module('pokerApp', [
                 $scope.cards[card].flipped = false;
                 $scope.canGoBack = false;
             }
-            $scope.shownCards = angular.copy($scope.cards);
+            $scope.shownCards = $scope.cards;
             console.log($scope.shownCards)
         }
         $scope.showAll = showAll

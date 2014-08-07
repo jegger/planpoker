@@ -3,9 +3,7 @@
    width: 100px;
    height: 150px;
    position: relative;
-    /*margin: 50px auto;*/
   margin: 5px;
-  float: left;
 }
 .flip .card.flipped {
   -webkit-transform: rotatey(-180deg);
